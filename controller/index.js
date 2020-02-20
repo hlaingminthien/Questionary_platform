@@ -1,3 +1,4 @@
+const questionController = require('./controller.question')
 const userController = require('./controller.user')
 
-module.exports = { userController}
+module.exports = { questionController, userController}

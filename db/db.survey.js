@@ -10,6 +10,11 @@ const getQuestion = () => {
     return db.collection("survey").find({});
 }
 
+const setUser = (data) => {
+    db.collection("forshow_user").insertOne(data);
+    return db.collection("forshow_user").find(data);
+}
+
 module.exports = {
-    getQuestion
+    getQuestion, setUser
 }
