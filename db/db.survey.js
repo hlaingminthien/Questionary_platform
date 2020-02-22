@@ -15,6 +15,12 @@ const setUser = (data) => {
     return db.collection("forshow_user").find(data);
 }
 
+const saveAnswers = (data) => {
+    db.collection("survey").drop(); 
+    db.collection("survey").insertOne(data);
+    return db.collection("survey").find(data);
+} 
+
 module.exports = {
-    getQuestion, setUser
+    getQuestion, setUser, saveAnswers
 }
